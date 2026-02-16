@@ -574,7 +574,6 @@ impl Modal {
     pub fn show_dialog(&mut self) {
         let modal_state = ModalState::load(&self.ctx, self.id);
         if let ModalType::Dialog(modal_data) = modal_state.modal_type {
-            self.close_on_outside_click = true;
             self.show(|ui| {
                 if let Some(title) = modal_data.title {
                     self.title(ui, title)
