@@ -82,7 +82,8 @@ impl eframe::App for ExampleApp {
             });
 
             // a dialog is useful when you have a one-time occurance and you want to relay information to the user
-            let mut dialog_modal = Modal::new(ctx, "dialog_modal").with_style(&self.modal_style)
+            let mut dialog_modal = Modal::new(ctx, "dialog_modal")
+                .with_style(&self.modal_style)
                 .with_close_on_outside_click(self.close_on_outside_click);
             // make sure you don't forget to show the dialog!
             dialog_modal.show_dialog();

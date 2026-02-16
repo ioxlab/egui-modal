@@ -489,8 +489,11 @@ impl Modal {
                             self.close();
                         }
                     }
-                    ui.painter()
-                        .rect_filled(screen_rect, CornerRadius::ZERO, self.style.overlay_color);
+                    ui.painter().rect_filled(
+                        screen_rect,
+                        CornerRadius::ZERO,
+                        self.style.overlay_color,
+                    );
                 });
 
             ctx_clone.move_to_top(area_resp.response.layer_id);
